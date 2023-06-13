@@ -49,17 +49,17 @@ const reducer = combineReducers({
   review: reviewReducer,
 });
 
-const cartItems = localStorage.getItem("cartItems")
-  ? JSON.parse(localStorage.getItem("cartItems"))
-  : [];
-const shippingInfo = localStorage.getItem("shippingInfo")
-  ? JSON.parse(localStorage.getItem("shippingInfo"))
-  : {};
+// const cartItems = localStorage.getItem("cartItems")
+//   ? JSON.parse(localStorage.getItem("cartItems"))
+//   : [];
+// const shippingInfo = localStorage.getItem("shippingInfo")
+//   ? JSON.parse(localStorage.getItem("shippingInfo"))
+//   : {};
 let initialState = {
-  cart: {
-    cartItems: cartItems,
-    shippingInfo: shippingInfo,
-  },
+  //   cart: {
+  //     cartItems: cartItems,
+  //     shippingInfo: shippingInfo,
+  //   },
 };
 
 const middleware = [thunk];

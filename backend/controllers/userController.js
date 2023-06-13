@@ -85,7 +85,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   )}/password/reset/${resetToken}`;
 
   const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it.`;
-
+  console.log(message);
   try {
     await sendEmail({
       email: user.email,
@@ -207,6 +207,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
 
   res.status(200).json({
     success: true,
+    user,
   });
 });
 
